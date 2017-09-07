@@ -26,6 +26,7 @@ h1 {
   background-color: steelblue;
   margin: 0;
   text-transform: uppercase;
+  font-weight: 400;
 }
 #colorDisplay{
   font-size: 150%;
@@ -54,7 +55,8 @@ button {
   color: steelblue;
   letter-spacing: 1px;
   font-size: inherit;
-  transition: all 0.3s
+  transition: all 0.3s;
+  outline: none;
 }
 button:hover {
   color: white;
