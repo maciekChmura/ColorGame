@@ -6,12 +6,24 @@ let colorDisplay = document.querySelector("#colorDisplay");
 let messageDisplay = document.querySelector("#message");
 let h1 = document.querySelector("h1");
 let resetButton = document.querySelector("#reset");
+let easyBtn = document.querySelector("#easyBtn");
+let hardBtn = document.querySelector("#hardBtn");
+
+easyBtn.addEventListener("click", function() {
+  easyBtn.classList.add("selected");
+  hardBtn.classList.remove("selected");
+})
+
+hardBtn.addEventListener("click", function() {
+  hardBtn.classList.add("selected");
+  easyBtn.classList.remove("selected");
+})
 
 resetButton.addEventListener("click", function() {
   colors = generateRandomColors(6);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
-  for(let i = 0; i < squares.length; i++) {
+  for (let i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i];
   }
   h1.style.backgroundColor = "#232323";
@@ -36,7 +48,7 @@ for (i = 0; i < squares.length; i++) {
 }
 
 function changeColors(color) {
-  for(let i = 0; i < squares.length; i++) {
+  for (let i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = color;
   }
 }
@@ -48,10 +60,9 @@ function pickColor() {
 
 function generateRandomColors(num) {
   let arr = [];
-  for(let i = 0; i < num; i++) {
+  for (let i = 0; i < num; i++) {
     arr.push(randomColor());
   }
-
   return arr;
 }
 
