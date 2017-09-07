@@ -1,5 +1,8 @@
 body {
   background-color: #232323;
+  margin: 0;
+  font-family: "Open Sans";
+  font-weight: 400;
 }
 
 .square {
@@ -8,23 +11,52 @@ body {
   background: purple;
   float: left;
   margin: 1.66%;
+  border-radius: 6px 6px 6px 6px;
+  transition: background 0.3s;
 }
 
 #container {
-  margin: 0 auto;
+  margin: 10px auto;
   max-width: 600px;
 }
 
 h1 {
   color: white;
+  text-align: center;
+  background-color: steelblue;
+  margin: 0;
+  text-transform: uppercase;
 }
-
+#colorDisplay{
+  font-size: 150%;
+}
 #stripe {
   background: white;
   height: 30px;
   text-align: center;
 }
+#message {
+  display: inline-block;
+  width: 20%;
+}
 
 .selected {
-  background: blue;
+  color: white;
+  background: steelblue;
+}
+
+button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 400;
+  color: steelblue;
+  letter-spacing: 1px;
+  font-size: inherit;
+  transition: all 0.3s
+}
+button:hover {
+  color: white;
+  background: steelblue;
 }
